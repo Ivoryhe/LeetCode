@@ -1,0 +1,9 @@
+也许是做题目做多了
+看到条件反射出来的是用Stack，然后想到linkedlist
+因为这个题目AC rate这么高，我就想到去查查我原来怎么做的，我那伙肯定对Stack跟Linkedlist这么熟悉
+结果，呵呵。。。
+只要一个一个读过去就好了
+不过，我有点忘记在前面总结了，在读string中的某一个char的时候，用substring是脑残的行为
+每一次substring，都要过一遍string的长度，一次偶然的机会在网上查到，java7中，substring的实现不一样了
+java6是直接可以index到的，而java7中要过一遍string，没有用index
+这说明什么，这说明time花的多了呀，但凡要拿string中的s，全部转战toCharArray(),本人亲生实践，toCharArray()快很多！
