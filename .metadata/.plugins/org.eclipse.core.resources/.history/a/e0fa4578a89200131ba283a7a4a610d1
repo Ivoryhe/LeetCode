@@ -1,0 +1,6 @@
+
+public class CopyOfTreeLinkNode {
+	int val;
+	CopyOfTreeLinkNode left, right, next;
+	CopyOfTreeLinkNode(int x) { val = x; }
+}

@@ -1,0 +1,14 @@
+
+public boolean hasCycle(ListNode head) {
+        ListNode p = head;
+        ListNode q = head;
+        if (head == null) return false;
+        while(p != null && q.next != null){
+            p = p.next;
+            q = q.next.next;
+            if(p == null|| q == null) return false;
+            if(p == q) return true;
+        }
+        return false;
+    }
+}
