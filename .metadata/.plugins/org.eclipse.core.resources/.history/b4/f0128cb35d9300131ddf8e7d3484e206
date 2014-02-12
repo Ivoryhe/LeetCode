@@ -1,8 +1,0 @@
-
-public class tset {
-
-	public static void main(String[] args){
-		System.out.println(Math.log1p(235923)/Math.log1p(1+1)*2);
-	}
-}
-
