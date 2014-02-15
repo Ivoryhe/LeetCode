@@ -1,0 +1,5 @@
+level遍历，考点就是拉Queue
+典型bfs，拉Queue就好
+这个里面用到两个q，要注意下用q2.clear()是不改reference的
+前面q1=q2，q1就遭灾了，所以q2要new一个出来的
+这就是我为什么没能一次过的原因。。。
