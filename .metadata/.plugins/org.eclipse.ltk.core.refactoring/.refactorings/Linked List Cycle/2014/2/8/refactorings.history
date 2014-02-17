@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ListNode.java&apos; to &apos;Plus One&apos;&#x0A;- Original project: &apos;Linked List Cycle&apos;&#x0A;- Destination element: &apos;Plus One&apos;&#x0A;- Original element: &apos;ListNode.java&apos;" description="Copy compilation unit" element1="/src&lt;{ListNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1392588454532" target="/Plus One" units="1" version="1.0"/>
+</session>

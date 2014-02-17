@@ -1,0 +1,6 @@
+
+public class TreeLinkNode1 {
+	int val;
+	TreeLinkNode left, right, next;
+	TreeLinkNode1(int x) { val = x; }
+}

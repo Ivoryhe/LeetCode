@@ -1,0 +1,64 @@
+public class Solution {
+    public static int[][] generateMatrix(int n) {
+        
+        int[][] matrix = new int[n][n];
+        if(n <=0) {return matrix;}
+        
+        int step = 0;
+        if(n == 1){
+            step = 1;
+        }
+        else{
+            step = n-1;
+        }
+        
+        int circle = (n+1)/2 - 1;
+        int count = 1;
+        int max = n*n;
+        for(int i=0; i<=circle; i++){
+            int j=i;
+            System.out.println(step);
+            //System.out.println(count);
+            //top
+            while(j<step+i && count<=max){
+                matrix[i][j] = count;
+                count++;
+                j++;
+            }
+            //System.out.println(count);
+            System.out.println("j: "+j);
+            System.out.println("I: " + i);
+            //right
+            j=i;
+            while(j<step+i && count<=max){
+            	
+                matrix[j][n-1-i] = count;
+                count++;
+                j++;
+            }
+            //System.out.println(count);
+            //down
+            j=i;
+            while(j<step+i && count<=max){
+                matrix[n-1-i][n-1-j] = count;
+                count++;
+                j++;
+            }
+            //System.out.println(count);
+            //left
+            j=i;
+            while(j<step+i && count<=max){
+                matrix[n-1-j][i] = count;
+                count++;
+                j++;
+            }
+            step = step-2;
+        }
+        //System.out.println(count);
+        return matrix;
+    }
+    
+    public static void main(String[] args){
+    	generateMatrix(4);
+    }
+}

@@ -1,0 +1,4 @@
+这个题目，知道了解BFS的运作之后，基本无难度
+我二轮没一遍过，忘记要check是不是最后的list会是null，因为已经到达叶子节点了
+BFS，就是上Q没什么好多想的，Q的内部实现应该是linkedlist，所以我是懒鬼，我直接上linkedlsit
+我有时会分不清poll，offer。。。。

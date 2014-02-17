@@ -1,0 +1,40 @@
+public class Solution2 {
+    public void connect(TreeLinkNode root) {
+        if(root == null) {return;}
+        if(root.left != null){
+            if(root.right != null){
+                root.left.next = root.right;
+            }
+            else{
+                root.left.next = findNext(root);
+            }
+        }
+        
+        if(root.right != null){
+            root.right.next = findNext(root);
+        }
+        
+        if(root.left != null){
+            connect(root.left);
+        }
+        if(root.right != null){
+            connect(root.right);
+        }
+    }
+    
+    public TreeLinkNode findNext(TreeLinkNode root){
+        TreeLinkNode point = root.next;
+        while(point != null){
+            if(point.left != null){
+                return point.left;
+            }
+            else if(point.right != null){
+                return point.right;
+            }
+            else{
+                point = point.next;
+            }
+        }
+        return null;
+    }
+}

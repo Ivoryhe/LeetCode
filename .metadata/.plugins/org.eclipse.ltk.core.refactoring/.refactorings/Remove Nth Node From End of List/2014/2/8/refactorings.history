@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Toughts.txt&apos; to &apos;Search a 2D Matrix&apos;&#x0A;- Original project: &apos;Remove Nth Node From End of List&apos;&#x0A;- Destination element: &apos;Search a 2D Matrix&apos;&#x0A;- Original element: &apos;Toughts.txt&apos;" description="Copy file" element1="Toughts.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1392592916730" target="/Search a 2D Matrix" units="0" version="1.0"/>
+</session>
