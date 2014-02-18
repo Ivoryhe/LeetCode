@@ -1,0 +1,5 @@
+真的面试要遇到这种题目，好去烧香了，好简单的说
+但素，我没有看到without extra space，转string之后转了char[]
+我不喜欢用substring，因为慢，转char[]就多空间了
+so，只能substring了
+我看了自己第一轮的答案，我又衷心的吐了。。。

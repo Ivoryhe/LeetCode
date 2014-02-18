@@ -1,0 +1,10 @@
+真的面试要遇到这种题目，好去烧香了，好简单的说
+但素，我没有看到without extra space，转string之后转了char[]
+我不喜欢用substring，因为慢，转char[]就多空间了
+so，只能substring了
+我看了自己第一轮的答案，我又衷心的吐了。。。
+然后，我又香插死自己了，看题目了么
+人家让你不要string了，你还string个毛啊
+x = (x%div)/10;
+div = div/100;
+每次比较少两位数字的，想想清楚，你个白痴！

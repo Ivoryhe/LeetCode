@@ -1,5 +1,0 @@
-这题目常规的不得了，了不得
-无非就是用stack，left压到底，然后pop一点一点看
-我是脑残，solution1是自己写的，提交很多遍才通过，right child要考虑他的child 会不会有left BB
-但是，solution1的代码还是很混乱的
-solution2是网上看到的，清晰可见，证明我是脑残的好武器。。。

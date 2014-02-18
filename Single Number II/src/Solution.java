@@ -11,7 +11,7 @@
  * Could you implement it without using extra memory?
  */
 public class Solution {
-    public int singleNumber(int[] A) {
+    public static int singleNumber(int[] A) {
         int a = 0;
         int b = 0;
         int c = 0;
@@ -23,5 +23,10 @@ public class Solution {
             b = c & b;
         }
         return b;
+    }
+    
+    public static void main(String[] args){
+    	int[] A = {1,1,1,2,2,3};
+    	System.out.println(singleNumber(A));
     }
 }

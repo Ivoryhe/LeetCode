@@ -1,8 +1,0 @@
-这题目常规的不得了，了不得，不得了
-在刚才已经做完了Inorder的情况下
-我居然没有做出来Preoder，我是不是好去死了！
-这个就是个stack么
-Inoder的时候，每次pop的时候读数据
-Preorder的时候，每次push的时候读数据
-Postorder的话，就是list.add(0,data)
-总结了哈，不能忘记啊。。。。

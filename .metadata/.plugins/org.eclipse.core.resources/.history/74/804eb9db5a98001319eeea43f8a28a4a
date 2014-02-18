@@ -1,0 +1,42 @@
+import java.util.Stack;
+
+public class Solution {
+    public static int trap(int[] A) {
+        int sum = 0;
+        Stack<Integer> s = new Stack<Integer>();
+        for(int i=0; i<A.length; i++){
+            if(i == 0){
+                s.push(i);
+            }
+            else{
+                if(A[i] < A[i-1]){
+                    s.push(i);
+                }
+                else if(A[i] == A[i-1]){
+                    continue;
+                }
+                else{
+                    int low = s.pop();
+                    int start = -1;
+                    while(!s.empty() && A[low] < A[i]){
+                        start = s.peek();
+                        System.out.println("start: " + start);
+                        sum = sum + (i-start-1)*(Math.min(A[i], A[start]) - A[low]);
+                        low = s.pop();
+                        System.out.println("sum: " + sum);
+                        System.out.println("low: " + low);
+                        System.out.println("Ai: "+A[i]);
+                    }
+                    s.push(i);
+                    
+                }
+            }
+        }
+        return sum;
+    }
+    
+    public static void main(String[] args){
+    	int[] A= {4,2,0,3,6};
+    	System.out.println(trap(A));
+    }
+}

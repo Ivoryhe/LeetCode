@@ -1,0 +1,4 @@
+这个题目，两题一个是有duplicate的，一个是没duplicate的
+我一轮在这题当中，干了一样的蠢事，用这o(n)的解法，发痴，其实logn能解决的
+有没有duplicate就是要注意一个
+当A[mid] == A[start]的时候，要单独拿出来，做start++操作，忽略重复值

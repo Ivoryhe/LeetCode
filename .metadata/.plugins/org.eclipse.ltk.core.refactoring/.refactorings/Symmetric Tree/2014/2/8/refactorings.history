@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Toughts.txt&apos; to &apos;Trapping Rain Water&apos;&#x0A;- Original project: &apos;Symmetric Tree&apos;&#x0A;- Destination element: &apos;Trapping Rain Water&apos;&#x0A;- Original element: &apos;Toughts.txt&apos;" description="Copy file" element1="Toughts.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1392701039898" target="/Trapping Rain Water" units="0" version="1.0"/>
+</session>
