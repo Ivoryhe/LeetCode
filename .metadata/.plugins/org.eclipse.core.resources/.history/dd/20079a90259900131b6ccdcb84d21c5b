@@ -1,0 +1,62 @@
+import java.util.Arrays;
+
+public class Solution {
+	static int min = Integer.MAX_VALUE;
+    public static int threeSumClosest(int[] num, int target) {
+        int result = Integer.MAX_VALUE;
+        
+        Arrays.sort(num);
+        
+        for(int i=0; i<num.length-2; i++){
+        	System.out.println(num[i]);
+            int delta = target-num[i];
+            int twoSum = helper(num, i+1, delta);
+            System.out.println("TWO: " + twoSum);
+            System.out.println("THREE: " + (twoSum+num[i]));
+            if(twoSum+num[i]-target == 0) {return target;}
+            System.out.println("result: " + (twoSum+num[i]-target));
+            System.out.println("Math:"+Math.abs(twoSum+num[i]-target));
+            if(Math.abs(twoSum+num[i]-target) < Math.abs(result-target)){
+            	System.out.println("hello");
+                result = twoSum+num[i];
+                System.out.println("result: " + result);
+            }
+        }
+        return result;
+    }
+    
+    
+    public static int helper(int[] num, int i, int delta){
+    	//System.out.println("delta: " + delta);
+        int j=num.length-1;
+        int record = min;
+        while(i<j){
+        	//System.out.println("i: " + num[i]);
+        	//System.out.println("j: " + num[j]);
+            int temp = Math.abs(delta - (num[i] + num[j]));
+            int tmp = delta - (num[i] + num[j]);
+            //System.out.println("temp: "+ temp);
+            if(temp < min){
+                min = temp;
+                record = num[i] + num[j];
+                //System.out.println("record: " + record);
+            }
+            if(tmp > 0){
+                i++;
+            }
+            else if(tmp < 0){
+                j--;
+            }
+            else{
+            	//System.out.println("hellp: " + delta);
+                return delta;
+            }
+        }
+        return record;
+    }
+    
+    public static void main(String[] args){
+    	int[] A = {-3,-2,-5,3,-4};
+    	System.out.println(threeSumClosest(A,-1));
+    }
+}
