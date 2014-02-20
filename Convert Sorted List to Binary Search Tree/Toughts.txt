@@ -1,0 +1,6 @@
+真是好去死了，这个题目提交的遍数要是leetcode上最高次数的
+第一个2B的问题是，root还是null的时候，你怎么root.val=point.val??
+你不new一个TreeNode出来，你怎么用里面的成员变量
+这题目就divide and conquer啊，思路不要太清晰
+然后，第二个2B问题来了，list第一个到底是1还是0
+整个程序，一伙是1，一伙是0，你说你能pass么，脑残

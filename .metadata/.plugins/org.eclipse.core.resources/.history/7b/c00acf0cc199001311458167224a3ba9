@@ -1,0 +1,46 @@
+public class Solution {
+    public static TreeNode sortedListToBST(ListNode head) {
+        if(head == null){
+            return null;
+        }
+        ListNode point = head;
+        int count = 0;
+        while(point != null){
+            count++;
+            point = point.next;
+        }
+        TreeNode root = null;
+        helper(head, 1, count, root);
+        return root;
+    }
+    
+    public static void helper(ListNode head, int start, int end, TreeNode root){
+        if(start > end || start < 0 || end < 0){
+            root = null;
+            return;
+        }
+        
+        ListNode point = head;
+        int mid = (end-start)/2;
+        System.out.println("mid: " + mid);
+        int i = 1;
+        //while(i<mid){
+        //    point = point.next;
+        //    i++;
+        //}
+        
+        root.val = point.val;
+        if(start == end){return;}
+        
+        if(point != null && point != head){
+            //helper(head,start,mid-1,root.left);
+            //helper(point,mid+1,end,root.right);
+        }
+    }
+    
+    public static void main(String[] args){
+    	ListNode a = new ListNode(0);
+    	sortedListToBST(a);
+    	
+    }
+}
