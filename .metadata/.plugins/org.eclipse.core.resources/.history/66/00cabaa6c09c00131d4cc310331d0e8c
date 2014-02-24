@@ -1,0 +1,36 @@
+public class Solution {
+    public ListNode partition(ListNode head, int x) {
+        if(head == null || head.next == null) {return head;}
+        
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode small = dummy;
+        ListNode large = dummy;
+        ListNode point = head;
+        boolean firstLarge = false;
+        ListNode largeStart = null;
+        while(point !=  null){
+            if(point.val < x){
+                small.next = point;
+                small = small.next;
+                if(!firstLarge){
+                    large = small;
+                }
+                else{
+                    small.next = largeStart;
+                    large.next = point.next;
+                }
+            }
+            else{
+                large.next = point;
+                large = large.next;
+                if(!firstLarge){
+                    largeStart = large;
+                    firstLarge = true;
+                }
+            }
+            point = point.next;
+        }
+        return dummy.next;
+    }
+}

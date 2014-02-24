@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+
+public class Solution {
+    public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        if(root == null) {return result;}
+        
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(root.val);
+        ArrayList<Integer> l = new ArrayList<Integer>(list);
+        result.add(l);
+        list.clear();
+        LinkedList<TreeNode> q1 = new LinkedList<TreeNode>();
+        LinkedList<TreeNode> q2 = new LinkedList<TreeNode>();
+        boolean zigzag = true;
+        
+        q1.add(root);
+        
+        while(q1.size() != 0){
+            TreeNode node = q1.removeFirst();
+            if(node.left != null){
+                q2.add(node.left);
+            }
+            if(node.right != null){
+                q2.add(node.right);
+            }
+            
+            if(q1.size() == 0){
+                if(q2.size() != 0){
+                    q1 = new LinkedList<TreeNode>(q2);
+                    if(!zigzag){
+                        while(q2.size() != 0){
+                            TreeNode temp = q2.removeFirst();
+                            list.add(temp.val);
+                        }
+                        zigzag = true;
+                    }
+                    else{
+                        while(q2.size() != 0){
+                            TreeNode temp = q2.remove(q2.size()-1);
+                            list.add(temp.val);
+                        }
+                        zigzag = false;
+                    }
+                    l = new ArrayList<Integer>(list);
+                    result.add(l);
+                    list.clear();
+                }
+            }
+        }
+        
+        return result;
+    }
+}

@@ -1,0 +1,64 @@
+import java.util.Stack;
+
+public class Solution {
+    public static TreeNode flatten(TreeNode root) {
+        if(root == null || (root.left == null && root.right == null)){
+            return root;
+        }
+        
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode point = root;
+        while(point != null || !stack.empty()){
+            while(point != null){
+                stack.push(point);
+                point = point.left;
+            }
+            
+            if(!stack.empty()){
+                TreeNode node = stack.pop();
+                //System.out.println("node: " + node.val);
+                TreeNode temp = node.right;
+                if(temp != null){
+                    point = temp;
+                }
+                if(node.left != null){
+                    node.right = node.left;
+                    //System.out.println("right: " + node.right.val);
+                    node.left =  null;
+                    TreeNode right = node.right;
+                    while(right != null){
+                        right = right.right;
+                    }
+                    
+                    //System.out.println("after: " + node.right.val);
+                    right = temp;
+                }
+            }
+        }
+        return root;
+    }
+    
+    public static void main(String[] args){
+    	TreeNode a = new TreeNode(1);
+    	TreeNode b = new TreeNode(2);
+    	TreeNode c = new TreeNode(3);
+    	a.left = b;
+    	b.left = c;
+    	TreeNode test = flatten(a);
+    	print(test);
+    }
+    
+    public static void print(TreeNode root){
+    	if(root == null) {System.out.println();}
+		
+		if(root.left != null){
+			print(root.left);
+		}
+		
+		if(root.right != null){
+			print(root.right);
+		}
+		
+		System.out.println(root.val);
+    }
+}
