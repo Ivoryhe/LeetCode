@@ -1,0 +1,8 @@
+这个题目看起来没什么难度
+可是pass却用了好多次
+我给zhu说过所有的关于linkedlist的题目，我都不觉得好做
+因为，你总有思路，总是不能bug free
+不过zhu给我一个很好地idea，就是在head前面造一个dummy node
+这样我的人生就轻松很多了
+就这题目而言，首先要明白inserion sort
+然后sort跟unsort部分，你都得有previous指针

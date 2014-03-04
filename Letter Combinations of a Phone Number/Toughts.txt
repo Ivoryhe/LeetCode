@@ -1,0 +1,11 @@
+这个题目，其实看到就想到DFS了
+但素，一直过不去，我一开始以为用了substring()的缘故
+然后改成StringBuffer，倒是提一下StringBuffer有个reverse的方法，会让生活美好很多
+因为StringBuffer不知道怎么减掉后面的，然后又查到StringBuilder，又学习了.deleteCharAt()这个方法
+不过，这些都不是我过不去的原因。。。
+我对于递归调用的开始与退出点，还是掌握的不行。。。
+这个题目而言，每次处理一位，每一位有几个选择
+把这个想清楚就好下手了
+其实，用String这个题目也是过得去的。。。
+就当学习下StringBuilder了。。。
+不过，String与StringBuffer这个基础的java概念，必须要会！
